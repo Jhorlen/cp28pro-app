@@ -1,14 +1,57 @@
 {
-  "rewrites": [{ "source": "/((?!assets|icons|mediapipe|.*\\..*).*)", "destination": "/index.html" }],
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/((?!assets|icons|mediapipe|.*\\..*).*)",
+      "destination": "/index.html"
+    }
+  ],
   "headers": [
-    { "source": "/sw.js", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] },
-    { "source": "/app-version.(json|sig)", "headers": [{ "key": "Cache-Control", "value": "no-cache" }] },
-    { "source": "/(.*)", "headers": [
-      { "key": "Permissions-Policy", "value": "camera=(self), microphone=(self)" },
-      { "key": "X-Content-Type-Options", "value": "nosniff" },
-      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-      { "key": "X-Frame-Options", "value": "DENY" },
-      { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains" }
-    ]}
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/app-version.(json|sig)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(self), microphone=(self)"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        }
+      ]
+    }
   ]
 }
