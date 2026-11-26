@@ -1,0 +1,1 @@
+import{r as a}from"./react-replSXjp.js";function n(r,t){const[e,c]=a.useState(()=>{try{const s=localStorage.getItem(r);if(s==null)return t;const o=JSON.parse(s);return typeof t=="object"&&t!==null&&!Array.isArray(t)?{...t,...o}:o}catch{return t}});return a.useEffect(()=>{try{localStorage.setItem(r,JSON.stringify(e))}catch{}},[r,e]),[e,c]}export{n as u};
